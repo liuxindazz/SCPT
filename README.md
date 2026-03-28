@@ -5,7 +5,7 @@ This repository contains the official PyTorch implementation for our **Pattern R
 
 Fine-grained image recognition poses a significant challenge due to the substantial expertise and effort required for manual annotation. Vision-language models (VLMs) like CLIP provide a compelling zero-shot alternative, reducing reliance on extensive labeled data. However, their ability to capture subtle distinctions remains limited, leading to subpar recognition performance. While prompt tuning has proven effective for adapting
 VLMs, most existing methods treat class labels as isolated, discrete entities, overlooking the rich semantic relationships between them. This oversimplified assumption limits the model’s ability to capture hierarchical dependencies and inter-class correlations—both critical for distinguishing visually similar categories. The problem is especially acute in fine-grained classification, where accurate recognition depends on understanding
-complex label semantics. To address this, we propose Structured-Condensed Prompt Tuning (SCPT), which enhances semantic structure modeling in prompt learning. Specifically, we introduce Semantic Relation Encoding (SRE) to explicitly model inter-class semantic topology and encode structured label relationships. In parallel, we design a Semantic Condensation loss (ScLoss) to suppress redundant supervision and extract discriminative components from the global semantic space. Together, these components significantly improve semantic alignment and fine-grained discrimination. Extensive experiments on 14 fine-grained benchmarks show that SCPT effectively mitigates semantic ambiguity and achieves state-of-the-art performance in both few-shot and base-to-novel generalization settings.
+complex label semantics. To address this, we propose Structured-Condensed Prompt Tuning (SCPT), which enhances semantic structure modeling in prompt learning. Specifically, we introduce Semantic Relation Encoding (SRE) to explicitly model inter-class semantic topology and encode structured label relationships. In parallel, we design a Semantic Condensation loss (ScLoss) to suppress redundant supervision and extract discriminative components from the global semantic space. Together, these components significantly improve semantic alignment and fine-grained discrimination. Extensive experiments on 14 fine-grained benchmarks show that SCPT effectively mitigates semantic ambiguity and achieves state-of-the-art performance in both few-shot and base-to-novel generalization settings.
 
 ## 📌 Citation
 If our work or this repository is helpful for your research, please cite our paper:
@@ -20,10 +20,14 @@ If our work or this repository is helpful for your research, please cite our pap
 ```
 
 ## 🚀 Main Contributions
+
 • We introduce Structured-Condensed Prompt Tuning (SCPT), a structure-aware method that enhances semantic modeling in vision-language models for FGIR, improving class differentiation through inter-class relationship capture.
+
 • We propose SRE, a technique to model inter-class semantic topology by encoding structured label relationships, preserving global semantic structure for better class hierarchy understanding.
-• We design ScLoss to reduce redundant supervision signals and emphasize discriminative features, improving task relevance and boosting few-shot adaptation and generalization.
-• Extensive experiments on 14 FGIR benchmarks show that SCPT outperforms existing methods, setting a new state-of-the-art in few-shot learning and base-tonovel generalization tasks.
+
+• We design ScLoss to reduce redundant supervision signals and emphasize discriminative features, improving task relevance and boosting few-shot adaptation and generalization.
+
+• Extensive experiments on 14 FGIR benchmarks show that SCPT outperforms existing methods, setting a new state-of-the-art in few-shot learning and base-to-novel generalization tasks.
 
 ## 📂 Repository Structure
 ```
